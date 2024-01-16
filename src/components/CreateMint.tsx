@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { createMint } from '../api/mintAPIs';
+import { toast } from "react-toastify";
+
 const CreateMint = () => {
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
@@ -27,12 +29,13 @@ const CreateMint = () => {
             description: description,
             image: image
         };
-
         console.log('Mint created:', mintData);
         try {
             const response = await createMint(mintData);
+            toast("Mint created successfully!")
             console.log('Mint created:', response);
         } catch (error) {
+            toast("Error creating mint!")
             console.error('Error creating mint:', error);
 
         };
