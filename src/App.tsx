@@ -89,7 +89,7 @@ export function App({ signOut, user }: WithAuthenticatorProps) {
                         Mint Item
                     </Link> 
                     {" "}
-                    <Link to="/list" style={{ ...headerMenuStyle }}>
+                    <Link to="/" style={{ ...headerMenuStyle }}>
                         List Items
                     </Link>
                     {" "}
@@ -106,7 +106,7 @@ export function App({ signOut, user }: WithAuthenticatorProps) {
           <Routes>
             
             <Route path="/create"   element={<CreateMint />}  />
-            <Route path="/list"     element={<MintListComponent/>} />
+            <Route path="/"     element={<MintListComponent/>} />
             <Route path="/detail" element={<MintDetail id={''} />} />
 
           </Routes>

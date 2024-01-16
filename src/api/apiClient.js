@@ -2,6 +2,7 @@ import axios from "axios";
 import { fetchAuthSession } from 'aws-amplify/auth';
 
 // const apiKey = process.env.REACT_APP_APIKEY;
+
 const accessToken = localStorage.getItem('accessToken'); 
 console.log("This is access token", accessToken);   
 

@@ -31,7 +31,7 @@ const CustomHeader = ({ username }: HeaderProps) => {
                         Mint Item
                     </Link> 
                     {" "}
-                    <Link to="/list" style={{ ...headerMenuStyle, ...(location.pathname === '/list' && selectedStyle) }}>
+                    <Link to="/" style={{ ...headerMenuStyle, ...(location.pathname === '/' && selectedStyle) }}>
                         List Items
                     </Link>
                     {" "}
