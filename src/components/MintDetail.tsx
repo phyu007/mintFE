@@ -26,14 +26,14 @@ const MintDetail: React.FC<MintDetailProps> = () => {
             try {
                 const response = await getMintDetails(myParam); // Replace with your API endpoint
                 console.log("mint detail:", response)
-                setMintDetail(response.data[0]); // Update mintDetail with the new response
+                setMintDetail(response.data[0]);
             } catch (error) {
                 console.error('Error fetching mint detail:', error);
             }
         };
 
         fetchMintDetail();
-    }, [myParam]); // Add myParam as a dependency to useEffect
+    }, []);
 
     if (!mintDetail) {
         return <div>Loading...</div>;
