@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getMintDetails } from '../api/mintAPIs'; // Replace 'yourApiFile' with the correct path
 import { useLocation } from 'react-router-dom';
+import '../styles/stylesheet.css';
 
 interface MintDetailProps {
     id: string;
@@ -43,7 +44,7 @@ const MintDetail: React.FC<MintDetailProps> = () => {
         <div>
             <h2>{mintDetail.name}</h2>
             <p>{mintDetail.description}</p>
-            <img src={mintDetail.image} alt={mintDetail.name} />
+            <img className="photo" src={mintDetail.image} alt={mintDetail.name} />
         </div>
     );
 };

@@ -30,33 +30,6 @@ Amplify.configure(config);
 
 
 
-// export function App({ signOut, user }: WithAuthenticatorProps) {
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       const { idToken } = (await fetchAuthSession()).tokens ?? {};
-//       if (idToken) {
-//         localStorage.setItem('accessToken', idToken.toString());
-//         console.log('idToken:', idToken.toString());
-//       }
-//     };
-//     fetchData();
-//   }, []);
-
-//   return (
-//     <Router>
-//       <>
-//         <h1>Hello {user?.username}</h1>
-//         <MintComponent />
-//         <Routes>
-//           <Route path="/mints" element={<MintDetail id={''} />} />
-//         </Routes>
-//         <button onClick={signOut}>Sign out</button>
-//       </>
-//     </Router>
-//   );
-// }
-
-// export default withAuthenticator(App);
 
 
 
